@@ -1,0 +1,21 @@
+{% extends "core/main_layout.html" %}
+
+{% block content %}
+    <div>
+    <h1>Projects</h1>
+
+    {% for project in projects %}
+        <div class="projects">
+            <div class="project-thumbnail">
+                <img alt="thumbnail" src="{{ project.thumbnail.url }}" width="512" height="512">
+            </div>
+            <div class="project-details">
+                <h2>{{ project.name }}</h2>
+                <p>{{ project.about }}</p>
+                <p>{{ project.date }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+{% endblock %}

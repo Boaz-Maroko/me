@@ -1,0 +1,116 @@
+body {
+    display: block;
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 10vh;
+    padding: 20px 0 0 20px;
+    margin-top: 10%;
+}
+footer p {
+    max-width: 20vw;
+}
+
+.navbar {
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 65px;
+    margin-bottom: 10%;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar a{
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+.navbar a:active {
+    background-color: aqua;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    min-width: 90vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding-top: 15%;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 40vw;
+    min-height: 40vh;
+}
+.profile img{
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-width: 40vw;
+}
+
+.socials i {
+    padding: 0 20px 0 20px;
+}
+.footer-icons {
+    display: flex;
+    float: right;
+}
+.footer-icons i {
+    padding: 0 20px 0 0;
+}
+.experience {
+    margin: 10% 0 10% 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+
+}
+.education {
+    margin: 10% 0 10% 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+}
+.resume-page {
+    margin-top: 5%;
+    position: page;
+}
+.projects {
+    margin: 10% 0 10% 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.project-thumbnail {
+    display: flex;
+    flex-direction: column;
+}
+.project-details {
+    display: flex;
+    flex-direction: column;
+}

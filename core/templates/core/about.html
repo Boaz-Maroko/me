@@ -1,0 +1,30 @@
+{% extends "core/main_layout.html" %}
+
+{% block content %}
+
+    <div class="card">
+    
+    {% for detail in about_page %}
+        <div class="profile">
+            <img alt="profile" src="{{ detail.profile_picture.url }}" width="180px">
+        </div>
+        <div class="name">
+            <h1>{{ detail.name }}</h1>
+        </div>
+        <div>
+            <h2>{{ detail.role }}</h2>
+        </div>
+        <div class="socials">
+            <a href="www.linkedin.com/in/boazmaroko" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a href="https://github.com/Boaz-Maroko" target="_blank" rel="noopener"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="https://twitter.com/AlphaaHub" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+        </div>
+
+
+    {% endfor %}
+    
+    
+    </div>
+    
+{% endblock %}
+
