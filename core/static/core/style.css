@@ -1,3 +1,6 @@
+*{
+    font-family: 'Roboto';
+}
 body {
     display: block;
     background-color: white;
