@@ -16,6 +16,8 @@ class Experience(models.Model):
     company_name = models.CharField(max_length=50)
     company_location = models.CharField(max_length=50)
     about = models.TextField()
+    start_date = models.DateField(default=timezone.now)
+    end_date = models.DateField(default=timezone.now)
 
 
 class Education(models.Model):

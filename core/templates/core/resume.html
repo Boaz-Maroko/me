@@ -3,11 +3,11 @@
 {% block title %}Resume{% endblock %}
 
 {% block content %}
-
-    <div class="resume-page">
     <h1>Resume</h1>
 
-        <h2>Experience</h2>
+    <div class="resume-page">
+
+        <h2 class="resume-header">Experience</h2>
         {% for entry in experience_page %}
             <div class="experience">
                 <h3>{{ entry.position }}</h3>
@@ -18,7 +18,7 @@
             </div>
         {% endfor %}
 
-        <h2>Education</h2>
+        <h2 class="resume-header">Education</h2>
 
         {% for entry in education_page %}
             <div class="education">

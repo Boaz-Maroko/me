@@ -13,26 +13,22 @@
 <body>
 
 {% csrf_token %}
-
-<div class="row">
-    <div class="col-12">
-        <div class="navbar">
-            <a href="{% url "about" %}" id="about">About me</a>
-            <a href="{% url "experience" %}" id="resume">Resume</a>
-            <a href="{% url "professional" %}" id="projects">Projects</a>
-            <a href="#" id="contact">Contact</a>
-        </div>
+    <div class="navbar">
+        <a href="{% url "about" %}" id="about">About me</a>
+        <a href="{% url "experience" %}" id="resume">Resume</a>
+        <a href="{% url "professional" %}" id="projects">Projects</a>
+        <a href="#" id="contact">Contact</a>
     </div>
-</div>
 
 
-<div class="wrapper">
+
+    <div class="wrapper">
     
-    {% block content %}
+        {% block content %}
     
-    {% endblock %}
+        {% endblock %}
 
-</div>
+    </div>
 
 </body>
 
