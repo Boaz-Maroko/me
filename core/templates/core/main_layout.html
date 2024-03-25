@@ -5,19 +5,30 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="Boaz Maroko Online portfolio">
+    <meta name="keywords" content="Boaz Maroko Developer Junior Fullstack Kenya">
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/389cc981b4.js" crossorigin="anonymous"></script>
+    <script src="{% static 'core/script.js' %}"></script>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
 {% csrf_token %}
     <div class="navbar">
-        <a href="{% url "about" %}" id="about">About me</a>
-        <a href="{% url "experience" %}" id="resume">Resume</a>
-        <a href="{% url "professional" %}" id="projects">Projects</a>
-        <a href="#" id="contact">Contact</a>
+        <div class="navbar-title"><h1>Portfolio</h1></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <a href="{% url "about" %}" id="about">About me</a>
+            <a href="{% url "experience" %}" id="resume">Resume</a>
+            <a href="{% url "professional" %}" id="projects">Projects</a>
+            <a href="#" id="contact">Contact</a>
+        </div>
     </div>
 
 
