@@ -1,0 +1,18 @@
+{% extends "core/main_layout.html" %}
+
+{% block title %}contact{% endblock %}
+
+{%  block content %}
+    <div class="contact-card">
+        <div class="signatory"><p>Hello, Let's Talk</p></div>
+        <div class="contact-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ contact_form }}
+                <div>
+                    <button type="submit" name="submit" id="send-message">SEND</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -33,3 +33,8 @@ class Professional(models.Model):
     thumbnail = models.ImageField(default="core/default.png", upload_to='core/media/core')
     about = models.TextField()
     date = models.DateTimeField(default=timezone.now)
+
+
+class Messages(models.Model):
+    email = models.EmailField()
+    message = models.TextField(max_length=5000)

@@ -1,6 +1,7 @@
 *{
     font-family: 'Roboto';
     box-sizing: border-box;
+    background-color: white;
 }
 body {
     display: block;
@@ -19,13 +20,18 @@ h2 {
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     min-height: 10vh;
     padding: 20px 0 0 20px;
     border-top: black solid 1px;
+
+    .footer-icons {
+        
+    }
 }
 footer p {
-    max-width: 20vw;
 }
 
 .navbar {
@@ -55,11 +61,12 @@ footer p {
 
     a:hover {
         background-color: #dddddd;
-        color: cyan;
+        color: black;
     }
     a.active {
-        display: flex;
-        background-color: aqua;
+        display: block;
+        background-color: black;
+        color: white;
     }
 }
 
@@ -133,12 +140,14 @@ footer p {
     margin: 5% 0 5% 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 5%;
+    max-width: 70vw;
 
 }
 .education {
     margin: 5% 0 5% 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 5%;
+    max-width: 70vw;
 }
 .resume-page {
 
@@ -166,6 +175,7 @@ footer p {
     position: sticky;
     top: 65px;
     background-color: white;
+    text-align: center;
 }
 
 .divider {
@@ -174,11 +184,84 @@ footer p {
     height: 0.2vh;
     background-color: red;
 }
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    #send-message {
+        padding: 1em 3em 1em 3em;
+        margin: 0;
+        background-color: #2382fa;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .signatory {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        text-decoration: black;
+        font-weight: bold;
+        color: #2382fa;
+    }
+
+    .contact-form {
+
+
+        div{
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2em;
+
+            label {
+                font-size: 18px;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+
+            .email {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                width: 100%;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .email:focus {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                outline: none;
+            }
+
+            textarea {
+                height: 50px;
+                padding: 1em;
+                border: 1px solid black;
+                width: 100%;
+                border-radius: 10px;
+                overflow-y: hidden;
+                line-height: 1.5;
+                max-height: 250px;
+            }
+        }
+    }
+}
+
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
-        background-color: white;
         border-bottom: solid black 1px;
 
     }
@@ -191,8 +274,10 @@ footer p {
         flex-direction: column;
         width: 100%;
         text-align: center;
+
         a {
             padding: .5rem .1rem;
+            background-color: #dddddd;
         }
 
     }
@@ -218,7 +303,10 @@ footer p {
 
         }
     }
-    .footer p {
+    footer {
+        width: 100%;
+    }
+    footer p{
         width: 100%;
     }
     .navbar-links.active {
@@ -226,12 +314,31 @@ footer p {
     }
     .experience {
         box-shadow: none;
-        border-bottom: solid black 1px;
+        border-top: solid black 1px;
         background-color: white;
     }
     .education {
         box-shadow: none;
-        border-bottom: solid black 1px;
+        border-top: solid black 1px;
         background-color: white;
+    }
+    .resume-page h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .project-thumbnail {
+            width: 100%;
+            img {
+                display: none;
+                width: 128px;
+                height: 128px;
+            }
+        }
     }
 }

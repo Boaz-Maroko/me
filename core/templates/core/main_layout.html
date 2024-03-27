@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/389cc981b4.js" crossorigin="anonymous"></script>
-    <script src="{% static 'core/script.js' %}"></script>
+    <script defer src="{% static 'core/script.js' %}"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
 {% csrf_token %}
     <div class="navbar">
-        <div class="navbar-title"><h1>Portfolio</h1></div>
+        <div class="navbar-title"><h1>Portfolio | </h1></div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
         <div class="navbar-links">
-            <a href="{% url "about" %}" id="about">About me</a>
-            <a href="{% url "experience" %}" id="resume">Resume</a>
-            <a href="{% url "professional" %}" id="projects">Projects</a>
-            <a href="#" id="contact">Contact</a>
+            <a href="{% url "about" %}" class="tabs" id="about">About me</a>
+            <a href="{% url "experience" %}" class="tabs" id="resume">Resume</a>
+            <a href="{% url "professional" %}" class="tabs" id="projects">Projects</a>
+            <a href="{% url "contact" %}" class="tabs" id="contact">Contact</a>
         </div>
     </div>
 
@@ -46,9 +46,9 @@
 <footer>
     <p>&#169 Maroko Boaz <br> Powered By Moonshot</p>
     <div class="footer-icons">
-            <a href="www.linkedin.com/in/boazmaroko" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
-            <a href="https://github.com/Boaz-Maroko" target="_blank" rel="noopener"><i class="fa-brands fa-github fa-xl"></i></a>
-            <a href="https://twitter.com/AlphaaHub" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
+        <a href="www.linkedin.com/in/boazmaroko" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+        <a href="https://github.com/Boaz-Maroko" target="_blank" rel="noopener"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="https://twitter.com/AlphaaHub" target="_blank" rel="noopener"><i class="fa-brands fa-square-x-twitter fa-xl"></i></a>
         </div>
 </footer>
 

@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from time import sleep
+
+from .forms import ContactForm
 from .models import About, Education, Experience, Professional
 
 # Create your views here.
@@ -18,4 +21,19 @@ def experience(request):
 def professional(request):
     professional_page = Professional.objects.all()
     return render(request, "core/projects.html", {"projects": professional_page})
+
+
+def contact(request):
+    contact_form = ContactForm()
+    if request.method == "POST":
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            # print(contact_form)
+            contact_form.save()
+            sleep(2)
+            return redirect('contact')
+        else:
+            contact_form = ContactForm()
+
+    return render(request, "core/contact.html", {"contact_form": contact_form})
 
